@@ -194,9 +194,9 @@ namespace ios_calculator
 
         private void Button_Click_18(object sender, RoutedEventArgs e)
         {
-            actionType = '%';
-            firstNum = userInput;
-            userInput = "";
+            TextBoxResult.Text = "";
+            userInput += "";
+            TextBoxResult.Text = userInput;
         }
 
         private void TextBoxResult_TextChanged(object sender, TextChangedEventArgs e)
@@ -204,18 +204,34 @@ namespace ios_calculator
             
         }
 
+        private void closeApp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void minimalizeApp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                this.WindowState = WindowState.Minimized;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void TextBoxResult_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
-        }
-
-        private void Percent(double a)
-        {
-            if (actionType == '%')
-            {
-                a = (firstNum / 100);
-                TextBoxResult.Text = firstNum;
-            }
         }
     }
 }
