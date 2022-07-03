@@ -8,7 +8,7 @@
         Title="Calculator" Height="562" Width="358"
         Background="Black"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="Manual" UseLayoutRounding="False" Visibility="Visible" BorderThickness="0,0,0,0">
+        WindowStartupLocation="CenterScreen" WindowStyle="None" SizeToContent="Manual" UseLayoutRounding="False" Visibility="Visible" BorderThickness="0,0,0,0">
 
     <Window.Resources>
         <Style x:Key="FocusVisual">
