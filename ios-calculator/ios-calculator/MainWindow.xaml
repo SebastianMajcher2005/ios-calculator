@@ -5,13 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ios_calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="579" Width="373"
+        Title="Calculator" Height="562" Width="358"
         Background="Black"
         ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen" WindowStyle="None"
-        
-        >
-
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" SizeToContent="Manual" UseLayoutRounding="False" Visibility="Visible" BorderThickness="0,0,0,0">
 
     <Window.Resources>
         <Style x:Key="FocusVisual">
@@ -222,14 +219,12 @@
             </Setter>
         </Style>
         <Style x:Key="Window"  TargetType="{x:Type Grid}"/>
-        
-        
+
     </Window.Resources>
-    
-    
-    <Grid Style="{DynamicResource Window}" Margin="0,0,0,-10" Height="495" VerticalAlignment="Bottom">
+    <Grid Style="{DynamicResource Window}" Margin="0,97,0,0" Height="461" VerticalAlignment="Top">
+
         <Button x:Name="btn_equals" Style="{DynamicResource equals}" Content="=" HorizontalAlignment="Left" Margin="267,374,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FFF69906" BorderBrush="#FFFF9500" BorderThickness="0" Foreground="White" FontSize="48" FontFamily="Arial Unicode MS" Click="Button_Click_8"/>
-        <Button x:Name="btn_comma" Style="{DynamicResource equals}" Content="," HorizontalAlignment="Left" Margin="182,374,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FF313131" BorderBrush="#FF505050" BorderThickness="0" Foreground="White" FontSize="36" Click="Button_Click_7"/>
+        <Button x:Name="btn_comma" Style="{DynamicResource equals}" Content="," HorizontalAlignment="Left" Margin="182,374,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FF313131" BorderBrush="#FF505050" BorderThickness="0" Foreground="White" FontSize="36" Click="Button_Click_7" FontFamily="Arial Unicode MS"/>
         <Button x:Name="btn_zero" Style="{DynamicResource zero}" Content="0        " HorizontalAlignment="Left" Margin="10,374,0,0" VerticalAlignment="Top" Height="80" Width="165" Background="#FF313131" BorderBrush="#FF505050" BorderThickness="0" RenderTransformOrigin="0.201,0.489" Foreground="White" FontSize="36" Click="Button_Click_4" FontFamily="Arial Unicode MS"/>
         <Button x:Name="btn_one" Style="{DynamicResource equals}" Content="1" HorizontalAlignment="Left" Margin="12,284,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FF313131" BorderBrush="#FF505050" BorderThickness="0" Foreground="White" FontSize="36" FontFamily="Arial Unicode MS" Click="Button_Click_6"/>
         <Button x:Name="btn_plus" Style="{DynamicResource equals}" Content="+" HorizontalAlignment="Left" Margin="267,284,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FFF69906" BorderBrush="#FFFF9500" BorderThickness="0" Click="Button_Click_3" Foreground="White" FontSize="48" FontFamily="Arial Unicode MS"/>
@@ -247,10 +242,11 @@
         <Button x:Name="btn_plus_minus" Style="{DynamicResource equals}" Content="⁺∕₋" HorizontalAlignment="Left" Margin="97,27,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FF9F9F9F" RenderTransformOrigin="0.925,0.049" FontSize="28" FontFamily="Arial Unicode MS" BorderThickness="0" FontWeight="Bold" Click="Button_Click_17"/>
         <Button x:Name="btn_percent" Style="{DynamicResource equals}" Content="%" HorizontalAlignment="Left" Margin="182,27,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FF9F9F9F" FontFamily="Arial Unicode MS" FontSize="30" BorderThickness="0" FontWeight="Bold" Click="Button_Click_18"/>
         <Button x:Name="btn_divide" Style="{DynamicResource Division_btn}" Content="÷" HorizontalAlignment="Left" Margin="267,27,0,0" VerticalAlignment="Top" Height="80" Width="80" Background="#FFF69906" FontFamily="Arial Unicode MS" FontSize="36" Foreground="White" BorderBrush="#FFFF9500" BorderThickness="0" FontWeight="Bold" Click="Button_Click_5"/>
-        <TextBox x:Name="TextBoxResult" HorizontalAlignment="Left" Margin="10,-82,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="323" Height="85" FontSize="72" FontFamily="Arial Unicode MS" MaxLines="1" MaxLength="22" Foreground="White" Background="Black" FlowDirection="RightToLeft" BorderThickness="0" MinHeight="1" Padding="0,0,0,0" TextChanged="TextBoxResult_TextChanged_1"/>
-        <Ellipse Fill="#FFFF544D" Grid.Row="0" Height="20" Width="20" RenderTransformOrigin="0.4,0.467" Margin="10,-91,343,566" MouseLeftButtonDown="closeApp"></Ellipse>
-        <Ellipse Fill="#FFFFBD2E" Grid.Row="0" Height="20" Width="20" RenderTransformOrigin="0.4,0.467" Margin="40,-91,313,566" MouseLeftButtonDown="minimalizeApp"></Ellipse>
-        <Ellipse Fill="#FF28CA42" Grid.Row="0" Height="20" Width="20" RenderTransformOrigin="0.4,0.467" Margin="70,-91,283,566"></Ellipse>
+        <TextBox x:Name="TextBoxResult" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,-82,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="323" Height="85" FontSize="72" FontFamily="Arial Unicode MS" MaxLines="1" MaxLength="22" Foreground="White" Background="Black" FlowDirection="RightToLeft" BorderThickness="0" MinHeight="1" Padding="0,0,0,0" TextChanged="TextBoxResult_TextChanged_1"/>
+        <Ellipse Fill="#FFFF544D" Grid.Row="0" Height="20" Width="20" RenderTransformOrigin="0.494,0.525" Margin="6,-92,332,533" MouseLeftButtonDown="closeApp" MouseEnter="Ellipse_MouseEnter"></Ellipse>
+        <Ellipse Fill="#FFFFBD2E" Grid.Row="0" Height="20" Width="20" RenderTransformOrigin="0.4,0.467" Margin="31,-92,307,533" MouseLeftButtonDown="minimalizeApp"></Ellipse>
+        <Ellipse Fill="#FF28CA42" Grid.Row="0" Height="20" Width="20" RenderTransformOrigin="0.494,0.494" Margin="56,-92,282,533"></Ellipse>
+        <Button Content="Button" Opacity="0" HorizontalAlignment="Left" Margin="10,-67,0,0" VerticalAlignment="Top" Height="70" Width="323" Click="Button_Click_19"/>
     </Grid>
 
 </Window>

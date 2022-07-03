@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace ios_calculator
 {
     /// <summary>
@@ -20,11 +21,14 @@ namespace ios_calculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+
+
         public MainWindow()
         {
             InitializeComponent();
+
         }
+
 
         string firstNum , secondNum;
         char actionType = ' ';
@@ -78,7 +82,9 @@ namespace ios_calculator
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-
+            actionType = ',';
+            firstNum = userInput;
+            userInput = "";
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
@@ -100,10 +106,6 @@ namespace ios_calculator
                     break;
                 case ('*'):
                     result = frstNum * secNum;
-                    TextBoxResult.Text = result.ToString();
-                    break;
-                case ('%'):
-                    result = frstNum / 100;
                     TextBoxResult.Text = result.ToString();
                     break;
                 case ('/'):
@@ -227,6 +229,40 @@ namespace ios_calculator
 
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Window_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
+
+        private void Ellipse_MouseEnter(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+        }
+
+        private void Button_Click_19(object sender, RoutedEventArgs e)
+        {
+            int stringLength = TextBoxResult.Text.Length;
+            if (stringLength > 1)
+            {
+                TextBoxResult.Text = TextBoxResult.Text.Substring(stringLength -1);
+
+            }
+            else
+            {
+                TextBoxResult.Text = "0";
+            }
+
         }
 
         private void TextBoxResult_TextChanged_1(object sender, TextChangedEventArgs e)
