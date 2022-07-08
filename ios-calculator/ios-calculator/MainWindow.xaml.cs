@@ -265,6 +265,31 @@ namespace ios_calculator
 
         }
 
+        private void Ellipse_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void Ellipse_PreviewMouseUp_1(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void close_tabs_icons_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         private void TextBoxResult_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
