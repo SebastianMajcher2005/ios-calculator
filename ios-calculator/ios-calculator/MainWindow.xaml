@@ -248,7 +248,5 @@
         <Button Content="Button" Opacity="0" HorizontalAlignment="Left" Margin="10,-67,0,0" VerticalAlignment="Top" Height="70" Width="323" Click="Button_Click_19"/>
         <TextBox x:Name="close_tabs_icons" Opacity="1" HorizontalAlignment="Left" Margin="31,-95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Text="−" Foreground="Black" Background="{x:Null}" FontSize="24" Height="19" RenderTransformOrigin="0.496,0.575" TextChanged="close_tabs_icons_TextChanged" BorderThickness="0" IsReadOnly="True" IsHitTestVisible="False" FontWeight="Normal" FontFamily="Bell MT"/>
         <TextBox x:Name="close_tabs_icons1" Opacity="1" HorizontalAlignment="Left" Margin="6,-96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Text="×    " Foreground="Black" Background="{x:Null}" FontSize="24" Height="24" RenderTransformOrigin="0.496,0.575" TextChanged="close_tabs_icons_TextChanged" BorderThickness="0" IsReadOnly="True" IsHitTestVisible="False" FontWeight="Normal" FontFamily="Bell MT"/>
-
     </Grid>
-
 </Window>

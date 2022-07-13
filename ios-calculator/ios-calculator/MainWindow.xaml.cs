@@ -34,7 +34,7 @@ namespace ios_calculator
         char actionType = ' ';
         double result = 0.0;
         string userInput = "";
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Reset_Button(object sender, RoutedEventArgs e)
         {
             firstNum = "";
             secondNum = "";
@@ -43,35 +43,35 @@ namespace ios_calculator
             TextBoxResult.Text = "0";
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Multiplication_Button(object sender, RoutedEventArgs e)
         {
             actionType = '*';
             firstNum = userInput;
             userInput = "";
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Minus_Button(object sender, RoutedEventArgs e)
         {
             actionType = '-';
             firstNum = userInput;
             userInput = "";
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void Plus_Button(object sender, RoutedEventArgs e)
         {
             actionType = '+';
             firstNum = userInput;
             userInput = "";
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Zero_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "0";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void Divide_Button(object sender, RoutedEventArgs e)
         {
             actionType= '/';
             firstNum = userInput;
@@ -80,14 +80,14 @@ namespace ios_calculator
 
         
 
-        private void Button_Click_7(object sender, RoutedEventArgs e)
+        private void Comma_Button(object sender, RoutedEventArgs e)
         {
             actionType = ',';
             firstNum = userInput;
             userInput = "";
         }
 
-        private void Button_Click_8(object sender, RoutedEventArgs e)
+        private void Equals_Button(object sender, RoutedEventArgs e)
         {
             secondNum = userInput;
             double frstNum, secNum;
@@ -109,6 +109,8 @@ namespace ios_calculator
                     TextBoxResult.Text = result.ToString();
                     break;
                 case ('/'):
+                    result = frstNum / secNum;
+                    TextBoxResult.Text = result.ToString();
                     if (frstNum == 0 || secNum == 0)
                     {
                         result = 0;
@@ -125,7 +127,7 @@ namespace ios_calculator
             }
         }
 
-        private void Button_Click_6(object sender, RoutedEventArgs e)
+        private void One_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "1";
@@ -133,79 +135,67 @@ namespace ios_calculator
         }
 
 
-        private void Button_Click_9(object sender, RoutedEventArgs e)
+        private void Three_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "3";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_10(object sender, RoutedEventArgs e)
+        private void Two_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "2";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_11(object sender, RoutedEventArgs e)
+        private void Six_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "6";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_12(object sender, RoutedEventArgs e)
+        private void Five_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "5";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_13(object sender, RoutedEventArgs e)
+        private void Four_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "4";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_14(object sender, RoutedEventArgs e)
+        private void Nine_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "9";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_15(object sender, RoutedEventArgs e)
+        private void Eight_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "8";
             TextBoxResult.Text = userInput;
         }
 
-        private void Button_Click_16(object sender, RoutedEventArgs e)
+        private void Seven_Button(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "7";
             TextBoxResult.Text = userInput;
         }
-
-        private void Button_Click_17(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_Click_18(object sender, RoutedEventArgs e)
         {
             TextBoxResult.Text = "";
             userInput += "";
             TextBoxResult.Text = userInput;
         }
-
-        private void TextBoxResult_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-
         private void closeApp(object sender, MouseButtonEventArgs e)
         {
             try
@@ -230,12 +220,6 @@ namespace ios_calculator
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void Window_IsMouseDirectlyOverChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-
-        }
-
         private void Ellipse_MouseEnter(object sender, MouseEventArgs e)
         {
             try
@@ -262,36 +246,6 @@ namespace ios_calculator
             {
                 TextBoxResult.Text = "0";
             }
-
-        }
-
-        private void Ellipse_PreviewMouseUp(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
-        private void Ellipse_PreviewMouseUp_1(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void close_tabs_icons_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBoxResult_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
 
         }
     }
