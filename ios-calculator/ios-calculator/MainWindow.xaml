@@ -246,7 +246,9 @@
         <Ellipse Fill="#FFFF544D" Grid.Row="0" Height="20" ContentElement.PreviewMouseUp="Ellipse_PreviewMouseUp" Width="20" RenderTransformOrigin="0.5,0.5" Margin="6,-92,332,533" MouseLeftButtonDown="closeApp" MouseEnter="Ellipse_MouseEnter" PreviewMouseUp="Ellipse_PreviewMouseUp"></Ellipse>
         <Ellipse Fill="#FFFFBD2E" Grid.Row="0" Height="20" Width="20" RenderTransformOrigin="0.4,0.467" Margin="31,-92,307,533" MouseLeftButtonDown="minimalizeApp"></Ellipse>
         <Button Content="Button" Opacity="0" HorizontalAlignment="Left" Margin="10,-67,0,0" VerticalAlignment="Top" Height="70" Width="323" Click="Button_Click_19"/>
-        <TextBox x:Name="close_tabs_icons" Opacity="1" HorizontalAlignment="Left" Margin="6,-96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="45" Text="× −   " Foreground="Black" Background="{x:Null}" FontSize="24" Height="24" RenderTransformOrigin="0.496,0.575" TextChanged="close_tabs_icons_TextChanged" BorderThickness="0" IsReadOnly="True" IsHitTestVisible="False" FontWeight="Normal" FontFamily="Bell MT"/>
+        <TextBox x:Name="close_tabs_icons" Opacity="1" HorizontalAlignment="Left" Margin="31,-95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Text="−" Foreground="Black" Background="{x:Null}" FontSize="24" Height="19" RenderTransformOrigin="0.496,0.575" TextChanged="close_tabs_icons_TextChanged" BorderThickness="0" IsReadOnly="True" IsHitTestVisible="False" FontWeight="Normal" FontFamily="Bell MT"/>
+        <TextBox x:Name="close_tabs_icons1" Opacity="1" HorizontalAlignment="Left" Margin="6,-96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="20" Text="×    " Foreground="Black" Background="{x:Null}" FontSize="24" Height="24" RenderTransformOrigin="0.496,0.575" TextChanged="close_tabs_icons_TextChanged" BorderThickness="0" IsReadOnly="True" IsHitTestVisible="False" FontWeight="Normal" FontFamily="Bell MT"/>
+
     </Grid>
 
 </Window>
